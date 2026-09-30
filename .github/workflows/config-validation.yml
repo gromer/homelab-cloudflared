@@ -30,6 +30,7 @@ jobs:
 
       - name: Validate Docker Compose configuration
         env:
+          COMPOSE_DISABLE_ENV_FILE: "1"
           TOKEN: ci-placeholder
           TZ: UTC
         run: docker compose -f docker-compose.yml config --quiet
